@@ -1,0 +1,10 @@
+input{
+    transition:1s;
+}
+input:hover{
+    transition:.25s;
+    background-color:transparent;
+    cursor:pointer;
+    border:2px solid #fff;
+    color:#fff; 
+}
