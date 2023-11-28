@@ -39,10 +39,23 @@ arr.forEach((el,idx)=>{
     filtered_inp.forEach((inp,i)=>{
         inp.addEventListener('click',e=>{
             e.target.classList.add('scale-125')
+            if(e.target.value){
+                exp(el,size)
+            }
         })
         inp.addEventListener('focus',e=>{
+            e.preventDefault()
             if(e.target){
                 e.target.classList.add('scale-125')
+            }
+            if(e.target.value){
+                if(e.target.classList.contains('scale-125')){
+                    e.target.classList.toggle('scale-1')
+                }
+                else{
+                    e.target.classList.toggle('scale-125')
+                }
+                exp(el,size)
             }
         })
         //change EL for collapsing/expanding 
