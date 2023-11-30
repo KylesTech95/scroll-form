@@ -38,25 +38,20 @@ arr.forEach((el,idx)=>{
     //collapse & expand functions
     filtered_inp.forEach((inp,i)=>{
         inp.addEventListener('click',e=>{
-            e.target.classList.add('scale-125')
-            if(e.target.value){
-                exp(el,size)
+            if(e.target.classList.contains('form-control')){
+                e.target.classList.toggle('form-control-lg')
             }
         })
-        inp.addEventListener('focus',e=>{
-            e.preventDefault()
-            if(e.target){
-                e.target.classList.add('scale-125')
-            }
+        inp.addEventListener('focus',e=>{  
+            console.log(e.target)
             if(e.target.value){
-                if(e.target.classList.contains('scale-125')){
-                    e.target.classList.toggle('scale-1')
-                }
-                else{
-                    e.target.classList.toggle('scale-125')
-                }
+                coll(el,size)
+            }
+            else{
                 exp(el,size)
             }
+            
+                     
         })
         //change EL for collapsing/expanding 
         inp.addEventListener('change',e =>{
@@ -65,7 +60,6 @@ arr.forEach((el,idx)=>{
             let pos = e.target.getBoundingClientRect().y
             if(e.target.value){
                 coll(el,size)
-                e.target.classList.remove('scale-125')
             //code for dragging effect
             while(inc < (pos/3)){
                 inc++
@@ -83,16 +77,7 @@ arr.forEach((el,idx)=>{
                 exp(el,size)
             }
             
-        })
-        //input EL for collapsing/expanding 
-        inp.addEventListener('input',e =>{
-            if(!e.target.value){
-                exp(el,size)
-            }
-            
-        })
-        
-         
+        })    
     })
 })
         window.addEventListener('click', e=>{
