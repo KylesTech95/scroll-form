@@ -550,20 +550,17 @@ video {
   top: 0px;
 }
 
-.float-right {
-  float: right;
-}
-
 .float-left {
   float: left;
 }
 
-.ml-14 {
-  margin-left: 3.5rem;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mr-10 {
-  margin-right: 2.5rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-80 {
@@ -586,14 +583,12 @@ video {
   height: 100vh;
 }
 
-.w-screen {
-  width: 100vw;
+.w-3\/6 {
+  width: 50%;
 }
 
-.scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.w-screen {
+  width: 100vw;
 }
 
 .flex-col {
