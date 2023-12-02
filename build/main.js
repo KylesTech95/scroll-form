@@ -22,10 +22,6 @@ function collapse(arr){
         el.classList.add('duration-300')
         
         labels.forEach((label,i)=>{
-            // if(label.type!=='Submit'){
-            //     label.classList.add('w-screen')
-            //     label.classList.add('float-left') 
-            // }
             if(label.textContent=='Male'||label.textContent=='Female'){
                 let daddy = label.parentElement.parentElement
                 
