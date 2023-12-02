@@ -16,16 +16,28 @@ function collapse(arr){
         let filtered_inp = input.filter((_,i)=>i%2!==0)
         let labels = input.filter((_,i)=>i%2==0)
 
-        let size = 'mt-80'
+        let size = `mt-80`
+            if(idx > 2 && idx) size = `mt-44`
         el.classList.add(size)
         el.classList.add('duration-300')
         
         labels.forEach((label,i)=>{
-            label.classList.add('w-screen')
-            label.classList.add('float-left') 
+            // if(label.type!=='Submit'){
+            //     label.classList.add('w-screen')
+            //     label.classList.add('float-left') 
+            // }
+            if(label.textContent=='Male'||label.textContent=='Female'){
+                let daddy = label.parentElement.parentElement
+                
+            }
+            else{
+                label.classList.add('w-screen')
+            }
+               
+                        
         })
+        
         filtered_inp.forEach((inp,i)=>{
-            inp.classList.add('text-center')
             inp.addEventListener('click',e=>{
                 let small_width = 'w-3/6'
                 let screen = 'w-screen'
@@ -35,26 +47,32 @@ function collapse(arr){
                 }
             })
             inp.addEventListener('focus',e=>{
-                let not_active = 'w-3/6'
-                let active_inp = 'w-screen'
-                let target_parent = e.target.parentElement.parentElement
-                e.preventDefault();
-                //use test_arr
-                test_arr.push(e.target)
-                let current = test_arr[test_arr.length-1]
-                let previous = test_arr[test_arr.length-2] 
-                // let previous_parent = previous.parentElement.parentElement
-                if(current === e.target){
-                    if(target_parent.classList.contains(not_active)){
-                        target_parent.classList.remove(not_active)
-                        target_parent.classList.add(active_inp)
-                    }
-                    let previous_parent = previous.parentElement.parentElement
-                    if(previous_parent.classList.contains(active_inp)){
-                        previous_parent.classList.remove(active_inp)
-                        previous_parent.classList.add(not_active)
-                    }
-                }  
+                if(e.target.type==='radio'){
+                    return null
+                }
+                else{
+                    let not_active = 'w-3/6'
+                    let active_inp = 'w-screen'
+                    let target_parent = e.target.parentElement.parentElement
+                    e.preventDefault();
+                    //use test_arr
+                    test_arr.push(e.target)
+                    let current = test_arr[test_arr.length-1]
+                    let previous = test_arr[test_arr.length-2] 
+                    // let previous_parent = previous.parentElement.parentElement
+                    if(current === e.target){
+                        if(target_parent.classList.contains(not_active)){
+                            target_parent.classList.remove(not_active)
+                            target_parent.classList.add(active_inp)
+                        }
+                        let previous_parent = previous.parentElement.parentElement
+                        if(previous_parent.classList.contains(active_inp)){
+                            previous_parent.classList.remove(active_inp)
+                            previous_parent.classList.add(not_active)
+                        }
+                    } 
+                }
+                 
             })
             inp.addEventListener('change',e =>{
                 let inc = 0, dec;

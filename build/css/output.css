@@ -563,8 +563,20 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-44 {
+  margin-top: 11rem;
+}
+
 .mt-80 {
   margin-top: 20rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .flex {
@@ -589,6 +601,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .flex-col {
