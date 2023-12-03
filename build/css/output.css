@@ -550,10 +550,6 @@ video {
   top: 0px;
 }
 
-.float-left {
-  float: left;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -599,10 +595,6 @@ video {
   width: 100vw;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -617,16 +609,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.border-green-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
 .bg-red-200 {

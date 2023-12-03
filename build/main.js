@@ -34,6 +34,7 @@ function collapse(arr){
         })
         
         filtered_inp.forEach((inp,i)=>{
+            inp.classList.add('text-center')
             inp.addEventListener('click',e=>{
                 let small_width = 'w-3/6'
                 let screen = 'w-screen'
